@@ -27,14 +27,8 @@ jobs:
       - name: Sync papers from Google Scholar
         id: sync
         env:
-          SCHOLAR_ID: ${{ vars.SCHOLAR_ID }}
+          SCHOLAR_ID: ${{ vars.SCHOLAR_ID || 'pDL-0HoAAAAJ' }}
         run: |
-          if [ -z "$SCHOLAR_ID" ]; then
-            echo "::error::SCHOLAR_ID repository variable is not set."
-            echo "Go to Settings > Secrets and variables > Actions > Variables"
-            echo "and add SCHOLAR_ID with your Google Scholar user ID."
-            exit 1
-          fi
           python scripts/sync_scholar.py --scholar-id "$SCHOLAR_ID"
 
       - name: Check for changes
