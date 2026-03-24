@@ -1,32 +1,101 @@
 [
   {
     "year": 2026,
-    "title": "Paper Title Goes Here",
-    "authors": "D. Wessels, et al.",
-    "venue": "Conference / Journal Name",
+    "title": "Enhancing stability in cardiac risk stratification with equivariant neural fields",
+    "authors": "J. Wiers, D. Wessels, L. Alvarez-Florez, A. Bujalance Gomez, et al.",
+    "venue": "European Heart Journal - Digital Health",
+    "links": {}
+  },
+  {
+    "year": 2026,
+    "title": "Geometry-Aware Cardiac MRI Representation Learning with Equivariant Neural Fields",
+    "authors": "J. Wiers, D.R. Wessels, L. Arts, S. Ruiperez-Campillo, M. Kolk, F. Tjong, et al.",
+    "venue": "Medical Imaging with Deep Learning (MIDL)",
+    "links": {}
+  },
+  {
+    "year": 2025,
+    "title": "Equivariant Eikonal Neural Networks: Grid-Free, Scalable Travel-Time Prediction on Homogeneous Spaces",
+    "authors": "A. García-Castellanos, D.R. Wessels, N.J. Berg, R. Duits, D.M. Pelt, et al.",
+    "venue": "arXiv preprint",
     "links": {
-      "pdf": "#",
-      "arxiv": "#",
-      "code": "#"
+      "arxiv": "https://arxiv.org/abs/2505.16035",
+      "pdf": "https://arxiv.org/pdf/2505.16035"
     }
   },
   {
     "year": 2025,
-    "title": "Another Paper Title",
-    "authors": "D. Wessels, et al.",
-    "venue": "Conference / Journal Name",
+    "title": "Platonic Transformers: A Solid Choice for Equivariance",
+    "authors": "M.M. Islam, R. Anand, D.R. Wessels, F. de Kruiff, T.P. Kuipers, R. Ying, et al.",
+    "venue": "arXiv preprint",
     "links": {
-      "pdf": "#",
-      "arxiv": "#"
+      "arxiv": "https://arxiv.org/abs/2510.03511",
+      "pdf": "https://arxiv.org/pdf/2510.03511"
     }
   },
   {
     "year": 2025,
-    "title": "Yet Another Paper Title",
-    "authors": "D. Wessels, et al.",
-    "venue": "Conference / Journal Name",
+    "title": "Equivariant Neural Field based Whole-Slide representations for microsatellite instability prediction",
+    "authors": "D.R. Wessels*, M.J. Don*, Y.A. Weeda, S.L. Meijer, H. Kervadec, E.J. Bekkers",
+    "venue": "Medical Imaging with Deep Learning (MIDL)",
+    "links": {}
+  },
+  {
+    "year": 2025,
+    "title": "A rule-based approach as an alternative to end-to-end TIL prediction in gastroesophageal adenocarcinoma",
+    "authors": "D.R. Wessels, Y.A. Weeda, O.J. de Boer, H. Kervadec, S.L. Meijer, E.J. Bekkers",
+    "venue": "Medical Imaging with Deep Learning (MIDL)",
+    "links": {}
+  },
+  {
+    "year": 2025,
+    "title": "Whole slide classification for microsatellite instability prediction with geometry grounded methods",
+    "authors": "M. Don*, D. Wessels*, Y. Weeda, S. Meijer, E. Bekkers",
+    "venue": "ESMO Real World Data and Digital Oncology",
+    "links": {}
+  },
+  {
+    "year": 2025,
+    "title": "Unlocking the potential of deep learning-based detection and quantification of tumor infiltrating lymphocytes in gastric cancer",
+    "authors": "Y. Weeda, D. Wessels, E. Bekkers, O. de Boer, L. Kodach, S. Meijer",
+    "venue": "ESMO Real World Data and Digital Oncology",
+    "links": {}
+  },
+  {
+    "year": 2024,
+    "title": "Grounding continuous representations in geometry: Equivariant neural fields",
+    "authors": "D.R. Wessels, D.M. Knigge, S. Papa, R. Valperga, S. Vadgama, E. Gavves, et al.",
+    "venue": "International Conference on Learning Representations (ICLR)",
     "links": {
-      "pdf": "#"
+      "arxiv": "https://arxiv.org/abs/2406.05753",
+      "pdf": "https://arxiv.org/pdf/2406.05753"
     }
+  },
+  {
+    "year": 2024,
+    "title": "Space-time continuous PDE forecasting using equivariant neural fields",
+    "authors": "D.M. Knigge, D.R. Wessels, R. Valperga, S. Papa, J.J. Sonke, E. Gavves, et al.",
+    "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2406.06660",
+      "pdf": "https://arxiv.org/pdf/2406.06660"
+    }
+  },
+  {
+    "year": 2024,
+    "title": "The NGT200 Dataset: Geometric Multi-View Isolated Sign Recognition",
+    "authors": "O. Ranum, D.R. Wessels, G. Otterspeer, E.J. Bekkers, F. Roelofsen, et al.",
+    "venue": "arXiv preprint",
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2409.15284",
+      "pdf": "https://arxiv.org/pdf/2409.15284"
+    }
+  },
+  {
+    "year": 2024,
+    "title": "Equivariant Neural Fields For Symmetry Preserving Continuous PDE Forecasting",
+    "authors": "D.M. Knigge, D. Wessels, R. Valperga, S. Papa, S. Gavves, E.J. Bekkers",
+    "venue": "ICLR 2024 Workshop on AI4DifferentialEquations In Science",
+    "links": {}
   }
 ]
