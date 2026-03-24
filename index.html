@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David Wessels</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Cursor glow that follows mouse -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Floating nav -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">DW</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#papers">Papers</a>
+        <a href="#notes">Notes</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero section -->
+  <section class="hero" id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-greeting reveal">
+        <span class="hero-line"></span>
+        <span class="hero-greeting-text">Hello, I'm</span>
+      </div>
+      <h1 class="hero-name reveal reveal-delay-1">
+        David<br><span class="hero-name-accent">Wessels</span>
+      </h1>
+      <p class="hero-tagline reveal reveal-delay-2">
+        Researcher &bull; Builder &bull; Thinker
+      </p>
+      <div class="hero-cta reveal reveal-delay-3">
+        <a href="#about" class="btn btn-primary">Explore</a>
+        <a href="#papers" class="btn btn-ghost">Read Papers</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- About section -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-col reveal-slide-right">
+          <div class="about-image-wrapper">
+            <img src="images/wessels.png" alt="David Wessels" class="about-image">
+            <div class="about-image-frame"></div>
+            <!-- Easter egg: hover the photo for a surprise -->
+            <div class="about-image-glitch" aria-hidden="true">
+              <img src="images/wessels.png" alt="" class="about-image">
+            </div>
+          </div>
+        </div>
+        <div class="about-text-col">
+          <span class="section-label reveal">About</span>
+          <h2 class="section-title reveal reveal-delay-1">
+            Building at the intersection of <em>curiosity</em> and <em>code</em>.
+          </h2>
+          <p class="about-bio reveal reveal-delay-2">
+            [Your bio goes here. A few sentences about who you are, what drives you, and what you're working on. Keep it human, keep it real.]
+          </p>
+          <div class="about-stats reveal reveal-delay-3">
+            <div class="stat">
+              <span class="stat-number" data-target="0">0</span>
+              <span class="stat-label">Publications</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="0">0</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="0">0</span>
+              <span class="stat-label">Coffees / day</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Papers section -->
+  <section class="section papers" id="papers">
+    <div class="container">
+      <span class="section-label reveal">Research</span>
+      <h2 class="section-title reveal reveal-delay-1">Latest Papers</h2>
+      <p class="section-subtitle reveal reveal-delay-2">
+        A selection of recent work. More coming soon.
+      </p>
+      <div class="papers-grid" id="papersGrid">
+        <!-- Loaded dynamically from papers.json -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Notes / Blog section -->
+  <section class="section notes" id="notes">
+    <div class="container">
+      <span class="section-label reveal">Thoughts</span>
+      <h2 class="section-title reveal reveal-delay-1">Personal Notes</h2>
+      <p class="section-subtitle reveal reveal-delay-2">
+        Ideas, reflections, and things I find interesting.
+      </p>
+      <div class="notes-grid">
+        <article class="note-card reveal reveal-delay-1">
+          <span class="note-date">March 2026</span>
+          <h3 class="note-title">Welcome to my corner of the internet</h3>
+          <p class="note-excerpt">
+            This is where I'll share thoughts on research, technology, and whatever else catches my attention. Stay tuned.
+          </p>
+          <a href="#" class="note-read-more">Read more &rarr;</a>
+        </article>
+        <article class="note-card reveal reveal-delay-2">
+          <span class="note-date">Coming soon</span>
+          <h3 class="note-title">More notes on the way</h3>
+          <p class="note-excerpt">
+            [Placeholder for future notes. Replace with your actual content.]
+          </p>
+          <a href="#" class="note-read-more">Read more &rarr;</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee ribbon (decorative easter egg) -->
+  <div class="marquee-ribbon">
+    <div class="marquee-track">
+      <span>RESEARCH &bull; DESIGN &bull; CODE &bull; CURIOSITY &bull; RESEARCH &bull; DESIGN &bull; CODE &bull; CURIOSITY &bull; RESEARCH &bull; DESIGN &bull; CODE &bull; CURIOSITY &bull; RESEARCH &bull; DESIGN &bull; CODE &bull; CURIOSITY &bull;</span>
+      <span>RESEARCH &bull; DESIGN &bull; CODE &bull; CURIOSITY &bull; RESEARCH &bull; DESIGN &bull; CODE &bull; CURIOSITY &bull; RESEARCH &bull; DESIGN &bull; CODE &bull; CURIOSITY &bull; RESEARCH &bull; DESIGN &bull; CODE &bull; CURIOSITY &bull;</span>
+    </div>
+  </div>
+
+  <!-- Contact / Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-content reveal">
+        <h2 class="footer-title">Let's connect.</h2>
+        <p class="footer-text">
+          Always open to interesting conversations and collaborations.
+        </p>
+        <div class="footer-links">
+          <a href="mailto:your@email.com" class="footer-link">Email</a>
+          <a href="https://github.com/dafidofff" class="footer-link" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://scholar.google.com" class="footer-link" target="_blank" rel="noopener">Scholar</a>
+          <a href="https://twitter.com" class="footer-link" target="_blank" rel="noopener">Twitter / X</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 David Wessels</span>
+        <span class="footer-easter-egg" title="Try the Konami code...">Made with neurons & caffeine</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Konami code easter egg overlay -->
+  <div class="konami-overlay" id="konamiOverlay">
+    <div class="konami-content">
+      <div class="konami-emoji">&#127881;</div>
+      <h2>You found the secret!</h2>
+      <p>You clearly know your way around a keyboard.</p>
+      <button class="btn btn-primary" onclick="document.getElementById('konamiOverlay').classList.remove('active')">Nice</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

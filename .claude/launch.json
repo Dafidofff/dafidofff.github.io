@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "website",
+      "runtimeExecutable": "/Users/davidwessels/.pyenv/versions/3.11.1/bin/python3",
+      "runtimeArgs": ["-m", "http.server", "8080", "--directory", "/Users/davidwessels/Documents/code/dafidofff.github.io"],
+      "port": 8080
+    }
+  ]
+}

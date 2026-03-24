@@ -1,0 +1,32 @@
+[
+  {
+    "year": 2026,
+    "title": "Paper Title Goes Here",
+    "authors": "D. Wessels, et al.",
+    "venue": "Conference / Journal Name",
+    "links": {
+      "pdf": "#",
+      "arxiv": "#",
+      "code": "#"
+    }
+  },
+  {
+    "year": 2025,
+    "title": "Another Paper Title",
+    "authors": "D. Wessels, et al.",
+    "venue": "Conference / Journal Name",
+    "links": {
+      "pdf": "#",
+      "arxiv": "#"
+    }
+  },
+  {
+    "year": 2025,
+    "title": "Yet Another Paper Title",
+    "authors": "D. Wessels, et al.",
+    "venue": "Conference / Journal Name",
+    "links": {
+      "pdf": "#"
+    }
+  }
+]
