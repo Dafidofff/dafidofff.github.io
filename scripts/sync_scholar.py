@@ -158,6 +158,14 @@ def fetch_scholar_papers(scholar_id, max_papers=100):
     return papers
 
 
+def is_safe_url(url):
+    """Return True only if *url* uses an allowed scheme (http or https)."""
+    if not url:
+        return False
+    parsed = urllib.parse.urlparse(url)
+    return parsed.scheme in ("http", "https")
+
+
 def fetch_pdf_link(paper_url):
     """Try to extract a PDF link from an individual Scholar paper page."""
     try:
@@ -165,7 +173,11 @@ def fetch_pdf_link(paper_url):
         html = fetch_page(paper_url)
         parser = PaperPageParser()
         parser.feed(html)
-        return parser.pdf_url
+        url = parser.pdf_url
+        if url and not is_safe_url(url):
+            print("  Dropping PDF link with disallowed scheme.")
+            return None
+        return url
     except Exception as e:
         print(f"  Could not fetch PDF link: {e}")
         return None
@@ -223,7 +235,7 @@ def sync_papers(scholar_id, papers_file):
         }
 
         # Try to get a PDF link from the paper's detail page
-        if sp.get("link"):
+        if sp.get("link") and is_safe_url(sp["link"]):
             time.sleep(1.5)
             pdf_url = fetch_pdf_link(sp["link"])
             if pdf_url:
