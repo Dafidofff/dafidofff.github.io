@@ -414,34 +414,6 @@ body:hover .cursor-glow {
   margin-bottom: 40px;
 }
 
-.about-stats {
-  display: flex;
-  gap: 48px;
-}
-
-.stat {
-  display: flex;
-  flex-direction: column;
-}
-
-.stat-number {
-  font-size: 2rem;
-  font-weight: 600;
-  font-family: var(--font-serif);
-  background: var(--gradient-1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.stat-label {
-  font-size: 0.8rem;
-  color: var(--text-dim);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  margin-top: 4px;
-}
-
 /* --- Papers Section --- */
 .papers {
   background: var(--bg-elevated);
@@ -1034,10 +1006,6 @@ body:hover .cursor-glow {
     margin: 0 auto;
   }
 
-  .about-stats {
-    gap: 32px;
-  }
-
   .hero-cta {
     flex-direction: column;
     align-items: center;
@@ -1061,11 +1029,6 @@ body:hover .cursor-glow {
 @media (max-width: 480px) {
   .nav-links {
     gap: 14px;
-  }
-
-  .about-stats {
-    flex-direction: column;
-    gap: 20px;
   }
 
   .notes-grid {
