@@ -203,12 +203,63 @@ function animateCounter(el, target) {
 fetch('papers.json')
   .then(res => res.json())
   .then(papers => {
+    const featuredGrid = document.getElementById('featuredPapersGrid');
     const grid = document.getElementById('papersGrid');
-    papers.forEach((paper, i) => {
+
+    const labelMap = { pdf: 'PDF', arxiv: 'arXiv', code: 'Code', project: 'Project' };
+
+    // ── Featured cards ────────────────────────────────────────────────
+    const featured = papers.filter(p => p.highlight);
+    featured.forEach((paper, i) => {
+      const linkEntries = Object.entries(paper.links || {});
+      const primaryEntry = linkEntries.find(([k]) => k === 'pdf') || linkEntries[0];
+      const secondaryEntries = linkEntries.filter(([k, v]) => !primaryEntry || k !== primaryEntry[0]);
+
+      const primaryLink = primaryEntry
+        ? `<a href="${primaryEntry[1]}" class="featured-paper-link primary" target="_blank" rel="noopener">
+             ${labelMap[primaryEntry[0]] || primaryEntry[0]}
+           </a>`
+        : '';
+
+      const secondaryLinks = secondaryEntries
+        .map(([k, v]) => `<a href="${v}" class="featured-paper-link ghost" target="_blank" rel="noopener">${labelMap[k] || k}</a>`)
+        .join('');
+
+      const descHtml = paper.description
+        ? `<p class="featured-paper-description">${paper.description}</p>`
+        : '';
+
+      const card = document.createElement('article');
+      card.className = `featured-paper-card reveal reveal-delay-${i + 1}`;
+      card.innerHTML = `
+        <div class="featured-paper-inner">
+          <div class="featured-badge">
+            <span class="featured-badge-dot"></span>
+            Featured
+          </div>
+          <div class="featured-paper-year">${paper.year}</div>
+          <h3 class="featured-paper-title">${paper.title}</h3>
+          ${descHtml}
+          <div class="featured-paper-meta">
+            <span class="featured-venue-pill">${paper.venue}</span>
+          </div>
+          <p class="featured-paper-authors">${paper.authors}</p>
+          <div class="featured-paper-links">
+            ${primaryLink}
+            ${secondaryLinks}
+          </div>
+        </div>
+      `;
+      featuredGrid.appendChild(card);
+    });
+
+    // ── Regular cards (non-highlighted) ──────────────────────────────
+    const regular = papers.filter(p => !p.highlight);
+    regular.forEach((paper, i) => {
       const delay = Math.min(i + 1, 3);
       const links = Object.entries(paper.links || {})
         .map(([label, url]) => {
-          const display = { pdf: 'PDF', arxiv: 'arXiv', code: 'Code' }[label] || label.charAt(0).toUpperCase() + label.slice(1);
+          const display = labelMap[label] || label.charAt(0).toUpperCase() + label.slice(1);
           return `<a href="${url}" class="paper-link" target="_blank" rel="noopener">${display}</a>`;
         })
         .join('');
@@ -227,8 +278,10 @@ fetch('papers.json')
       grid.appendChild(card);
     });
 
-    // Observe newly added cards for reveal animation
-    grid.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    // Observe all newly added cards for reveal animation
+    [featuredGrid, grid].forEach(container => {
+      container.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    });
   });
 
 // --- Smooth anchor scroll ---

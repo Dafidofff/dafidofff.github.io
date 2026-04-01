@@ -100,6 +100,8 @@
     "title": "Grounding continuous representations in geometry: Equivariant neural fields",
     "authors": "D.R. Wessels, D.M. Knigge, S. Papa, R. Valperga, S. Vadgama, E. Gavves, et al.",
     "venue": "International Conference on Learning Representations (ICLR)",
+    "highlight": true,
+    "description": "We introduce Equivariant Neural Fields — a framework that grounds continuous signal representations in geometry, enforcing symmetry equivariance by construction. This yields compact, structured latent spaces that generalise across transformations.",
     "links": {
       "arxiv": "https://arxiv.org/abs/2406.05753",
       "pdf": "https://arxiv.org/pdf/2406.05753"
@@ -110,6 +112,8 @@
     "title": "Space-time continuous PDE forecasting using equivariant neural fields",
     "authors": "D.M. Knigge, D.R. Wessels, R. Valperga, S. Papa, J.J. Sonke, E. Gavves, et al.",
     "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
+    "highlight": true,
+    "description": "A fully continuous approach to PDE forecasting that operates directly in space-time, leveraging equivariant neural fields to respect the underlying physical symmetries of the system — without discretising the domain.",
     "links": {
       "arxiv": "https://arxiv.org/abs/2406.06660",
       "pdf": "https://arxiv.org/pdf/2406.06660"
