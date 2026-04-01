@@ -15,6 +15,31 @@
   },
   {
     "year": 2025,
+    "title": "13P Unlocking the potential of deep learning-based detection and quantification of tumor infiltrating lymphocytes in gastric cancer",
+    "authors": "Y Weeda, D Wessels, E Bekkers, O de Boer, L Kodach, S Meijer",
+    "venue": "ESMO Real World Data and Digital Oncology 10, 2025",
+    "links": {
+      "pdf": "https://www.esmorwd.org/article/S2949-8201(25)00101-8/pdf"
+    }
+  },
+  {
+    "year": 2025,
+    "title": "4P Whole slide classification for microsatellite instability prediction with geometry grounded methods",
+    "authors": "M Don*, D Wessels*, Y Weeda, S Meijer, E Bekkers",
+    "venue": "ESMO Real World Data and Digital Oncology 10, 2025",
+    "links": {
+      "pdf": "https://www.esmorwd.org/article/S2949-8201(25)00092-X/pdf"
+    }
+  },
+  {
+    "year": 2025,
+    "title": "A rule-based approach as an alternative to end-to-end TIL prediction in gastroesophageal adenocarcinoma",
+    "authors": "D.R. Wessels, Y.A. Weeda, O.J. de Boer, H. Kervadec, S.L. Meijer, E.J. Bekkers",
+    "venue": "Medical Imaging with Deep Learning (MIDL)",
+    "links": {}
+  },
+  {
+    "year": 2025,
     "title": "Equivariant Eikonal Neural Networks: Grid-Free, Scalable Travel-Time Prediction on Homogeneous Spaces",
     "authors": "A. García-Castellanos, D.R. Wessels, N.J. Berg, R. Duits, D.M. Pelt, et al.",
     "venue": "arXiv preprint",
@@ -22,6 +47,13 @@
       "arxiv": "https://arxiv.org/abs/2505.16035",
       "pdf": "https://arxiv.org/pdf/2505.16035"
     }
+  },
+  {
+    "year": 2025,
+    "title": "Equivariant Neural Field based Whole-Slide representations for microsatellite instability prediction",
+    "authors": "D.R. Wessels*, M.J. Don*, Y.A. Weeda, S.L. Meijer, H. Kervadec, E.J. Bekkers",
+    "venue": "Medical Imaging with Deep Learning (MIDL)",
+    "links": {}
   },
   {
     "year": 2025,
@@ -35,16 +67,9 @@
   },
   {
     "year": 2025,
-    "title": "Equivariant Neural Field based Whole-Slide representations for microsatellite instability prediction",
-    "authors": "D.R. Wessels*, M.J. Don*, Y.A. Weeda, S.L. Meijer, H. Kervadec, E.J. Bekkers",
-    "venue": "Medical Imaging with Deep Learning (MIDL)",
-    "links": {}
-  },
-  {
-    "year": 2025,
-    "title": "A rule-based approach as an alternative to end-to-end TIL prediction in gastroesophageal adenocarcinoma",
-    "authors": "D.R. Wessels, Y.A. Weeda, O.J. de Boer, H. Kervadec, S.L. Meijer, E.J. Bekkers",
-    "venue": "Medical Imaging with Deep Learning (MIDL)",
+    "title": "Unlocking the potential of deep learning-based detection and quantification of tumor infiltrating lymphocytes in gastric cancer",
+    "authors": "Y. Weeda, D. Wessels, E. Bekkers, O. de Boer, L. Kodach, S. Meijer",
+    "venue": "ESMO Real World Data and Digital Oncology",
     "links": {}
   },
   {
@@ -55,10 +80,19 @@
     "links": {}
   },
   {
-    "year": 2025,
-    "title": "Unlocking the potential of deep learning-based detection and quantification of tumor infiltrating lymphocytes in gastric cancer",
-    "authors": "Y. Weeda, D. Wessels, E. Bekkers, O. de Boer, L. Kodach, S. Meijer",
-    "venue": "ESMO Real World Data and Digital Oncology",
+    "year": 2024,
+    "title": "Equivariant Neural Fields For Symmetry Preserving Continous PDE Forecasting",
+    "authors": "DM Knigge, D Wessels, R Valperga, S Papa, S Gavves, EJ Bekkers",
+    "venue": "ICLR 2024 Workshop on AI4DifferentialEquations In Science, 2024",
+    "links": {
+      "pdf": "https://openreview.net/pdf?id=jmgBtIAVCS"
+    }
+  },
+  {
+    "year": 2024,
+    "title": "Equivariant Neural Fields For Symmetry Preserving Continuous PDE Forecasting",
+    "authors": "D.M. Knigge, D. Wessels, R. Valperga, S. Papa, S. Gavves, E.J. Bekkers",
+    "venue": "ICLR 2024 Workshop on AI4DifferentialEquations In Science",
     "links": {}
   },
   {
@@ -93,9 +127,9 @@
   },
   {
     "year": 2024,
-    "title": "Equivariant Neural Fields For Symmetry Preserving Continuous PDE Forecasting",
-    "authors": "D.M. Knigge, D. Wessels, R. Valperga, S. Papa, S. Gavves, E.J. Bekkers",
-    "venue": "ICLR 2024 Workshop on AI4DifferentialEquations In Science",
+    "title": "Unlocking the potential of deep learning-based detection and quantification of tumour infiltrating lymphocytes in gastric cancer",
+    "authors": "Y Weeda, D Wessels, A Mkundan, EJ Bekkers, OJ De Boer, W Song, ...",
+    "venue": "VIRCHOWS ARCHIV 485, S399-S399, 2024",
     "links": {}
   }
 ]
