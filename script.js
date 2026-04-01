@@ -166,39 +166,6 @@ window.addEventListener('load', () => {
   });
 });
 
-// --- Animated stat counters ---
-const statNumbers = document.querySelectorAll('.stat-number');
-
-const counterObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const el = entry.target;
-      const target = parseInt(el.getAttribute('data-target'));
-      animateCounter(el, target);
-      counterObserver.unobserve(el);
-    }
-  });
-}, { threshold: 0.5 });
-
-statNumbers.forEach(el => counterObserver.observe(el));
-
-function animateCounter(el, target) {
-  let current = 0;
-  const duration = 1500;
-  const start = performance.now();
-
-  function tick(now) {
-    const elapsed = now - start;
-    const progress = Math.min(elapsed / duration, 1);
-    // Ease out cubic
-    const eased = 1 - Math.pow(1 - progress, 3);
-    current = Math.round(eased * target);
-    el.textContent = current;
-    if (progress < 1) requestAnimationFrame(tick);
-  }
-  requestAnimationFrame(tick);
-}
-
 // --- Load papers from papers.json ---
 fetch('papers.json')
   .then(res => res.json())
