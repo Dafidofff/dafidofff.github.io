@@ -239,11 +239,15 @@ const aboutImage = document.querySelector('.about-image-wrapper .about-image');
 const speechBubble = document.getElementById('speechBubble');
 let speechTimeout;
 
-aboutImage.addEventListener('dblclick', () => {
+function showSpeechBubble() {
   clearTimeout(speechTimeout);
   speechBubble.classList.add('visible');
   speechTimeout = setTimeout(() => speechBubble.classList.remove('visible'), 2500);
-});
+}
+
+aboutImage.addEventListener('dblclick', showSpeechBubble);
+
+setTimeout(showSpeechBubble, 3000);
 
 // --- Easter Egg: Click the DW logo 7 times ---
 let logoClicks = 0;
