@@ -234,6 +234,17 @@ console.log(
   'color: #6c63ff; font-size: 11px;'
 );
 
+// --- Speech bubble on photo double-click ---
+const aboutImage = document.querySelector('.about-image-wrapper .about-image');
+const speechBubble = document.getElementById('speechBubble');
+let speechTimeout;
+
+aboutImage.addEventListener('dblclick', () => {
+  clearTimeout(speechTimeout);
+  speechBubble.classList.add('visible');
+  speechTimeout = setTimeout(() => speechBubble.classList.remove('visible'), 2500);
+});
+
 // --- Easter Egg: Click the DW logo 7 times ---
 let logoClicks = 0;
 const logo = document.querySelector('.nav-logo');
