@@ -20,113 +20,24 @@ function animateCursor() {
 }
 animateCursor();
 
-// --- Hero Canvas: Particle Network ---
-const canvas = document.getElementById('heroCanvas');
-const ctx = canvas.getContext('2d');
-let particles = [];
-let animId;
+// --- Theme Toggle ---
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = themeToggle.querySelector('.theme-toggle-icon');
 
-function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
-
-class Particle {
-  constructor() {
-    this.reset();
-  }
-
-  reset() {
-    this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height;
-    this.vx = (Math.random() - 0.5) * 0.4;
-    this.vy = (Math.random() - 0.5) * 0.4;
-    this.radius = Math.random() * 1.5 + 0.5;
-    this.opacity = Math.random() * 0.5 + 0.1;
-  }
-
-  update() {
-    this.x += this.vx;
-    this.y += this.vy;
-    if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-    if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-  }
-
-  draw() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(108, 99, 255, ${this.opacity})`;
-    ctx.fill();
-  }
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  themeIcon.textContent = theme === 'light' ? '◑' : '☀';
 }
 
-// Create particles
-const particleCount = Math.min(80, Math.floor(window.innerWidth * 0.05));
-for (let i = 0; i < particleCount; i++) {
-  particles.push(new Particle());
-}
+const savedTheme = localStorage.getItem('theme') ||
+  (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+applyTheme(savedTheme);
 
-function drawConnections() {
-  for (let i = 0; i < particles.length; i++) {
-    for (let j = i + 1; j < particles.length; j++) {
-      const dx = particles[i].x - particles[j].x;
-      const dy = particles[i].y - particles[j].y;
-      const dist = Math.sqrt(dx * dx + dy * dy);
-      if (dist < 150) {
-        const opacity = (1 - dist / 150) * 0.15;
-        ctx.beginPath();
-        ctx.moveTo(particles[i].x, particles[i].y);
-        ctx.lineTo(particles[j].x, particles[j].y);
-        ctx.strokeStyle = `rgba(108, 99, 255, ${opacity})`;
-        ctx.lineWidth = 0.5;
-        ctx.stroke();
-      }
-    }
-  }
-}
-
-// Mouse interaction with particles
-let heroMouseX = canvas.width / 2;
-let heroMouseY = canvas.height / 2;
-
-document.getElementById('hero').addEventListener('mousemove', (e) => {
-  heroMouseX = e.clientX;
-  heroMouseY = e.clientY;
+themeToggle.addEventListener('click', () => {
+  const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+  localStorage.setItem('theme', next);
+  applyTheme(next);
 });
-
-function animateParticles() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  // Draw subtle radial gradient from mouse position
-  const gradient = ctx.createRadialGradient(heroMouseX, heroMouseY, 0, heroMouseX, heroMouseY, 400);
-  gradient.addColorStop(0, 'rgba(108, 99, 255, 0.03)');
-  gradient.addColorStop(1, 'transparent');
-  ctx.fillStyle = gradient;
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-  particles.forEach(p => {
-    // Gentle attraction to mouse
-    const dx = heroMouseX - p.x;
-    const dy = heroMouseY - p.y;
-    const dist = Math.sqrt(dx * dx + dy * dy);
-    if (dist < 300) {
-      p.vx += dx * 0.00002;
-      p.vy += dy * 0.00002;
-    }
-    // Speed dampening
-    p.vx *= 0.999;
-    p.vy *= 0.999;
-
-    p.update();
-    p.draw();
-  });
-
-  drawConnections();
-  animId = requestAnimationFrame(animateParticles);
-}
-animateParticles();
 
 // --- Navigation scroll effect ---
 const nav = document.getElementById('nav');
@@ -159,9 +70,9 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealElements.forEach(el => revealObserver.observe(el));
 
-// Trigger hero reveals immediately on page load
+// Trigger above-fold reveals immediately on page load
 window.addEventListener('load', () => {
-  document.querySelectorAll('.hero .reveal, .hero .reveal-slide-right').forEach(el => {
+  document.querySelectorAll('.about .reveal, .about .reveal-slide-right').forEach(el => {
     el.classList.add('visible');
   });
 });
