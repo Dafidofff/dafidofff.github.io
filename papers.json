@@ -14,6 +14,15 @@
     "links": {}
   },
   {
+    "year": 2026,
+    "title": "Uncertainty-aware Machine Learning Interatomic Potentials via Learned Functional Perturbations",
+    "authors": "O Zaghen, M Zhdanov, D Coscia, DR Wessels, EJ Bekkers",
+    "venue": "arXiv preprint arXiv:2605.19939, 2026",
+    "links": {
+      "pdf": "https://arxiv.org/pdf/2605.19939"
+    }
+  },
+  {
     "year": 2025,
     "title": "13P Unlocking the potential of deep learning-based detection and quantification of tumor infiltrating lymphocytes in gastric cancer",
     "authors": "Y Weeda, D Wessels, E Bekkers, O de Boer, L Kodach, S Meijer",
